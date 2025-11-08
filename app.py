@@ -1,5 +1,5 @@
 import streamlit as st
-import pyyaml
+import yaml
 import os
 
 # --- Page setup ---
@@ -60,4 +60,5 @@ if "tags" in recipe:
         + "</p>",
         unsafe_allow_html=True
     )
+
 
