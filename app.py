@@ -1,26 +1,20 @@
 import streamlit as st
+import os
 
-st.title("🍳 My Recipe Book")
+st.set_page_config(page_title="My Recipe Book", page_icon="🍳")
 
-# Example recipe
-recipe = {
-    "title": "Chocolate Chip Cookies",
-    "ingredients": [
-        "2 cups flour",
-        "1/2 cup sugar",
-        "1 cup chocolate chips"
-    ],
-    "instructions": [
-        "Preheat oven to 180°C.",
-        "Mix ingredients.",
-        "Bake for 12 minutes."
-    ],
-}
+st.title("🍽️ My Recipe Book")
 
-st.header(recipe["title"])
-st.subheader("Ingredients")
-st.write("\n".join(recipe["ingredients"]))
+# --- Load all markdown files ---
+recipe_files = [f for f in os.listdir("recipes") if f.endswith(".md")]
+recipe_names = [f.replace(".md", "") for f in recipe_files]
 
-st.subheader("Instructions")
-for step in recipe["instructions"]:
-    st.markdown(f"- {step}")
+choice = st.sidebar.selectbox("Choose a recipe", recipe_names)
+
+# --- Load the selected recipe ---
+file_path = os.path.join("recipes", f"{choice}.md")
+with open(file_path, "r", encoding="utf-8") as f:
+    recipe_content = f.read()
+
+# --- Display the markdown content ---
+st.markdown(recipe_content, unsafe_allow_html=True)
