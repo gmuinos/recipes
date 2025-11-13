@@ -4,9 +4,9 @@ import re
 import frontmatter  # pip install python-frontmatter
 
 # --- Page setup ---
-st.set_page_config(page_title="My Recipe Book", page_icon="🍪", layout="centered")
+st.set_page_config(page_title="My Recipes", layout="centered")
 
-st.title("🍳 My Recipe Book")
+st.title("Recipes")
 
 # --- Load Markdown recipes ---
 recipe_files = [f for f in os.listdir("recipes") if f.endswith(".md")]
@@ -83,3 +83,4 @@ if recipe["tags"]:
         + "</p>",
         unsafe_allow_html=True
     )
+
