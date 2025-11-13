@@ -2,7 +2,7 @@ title: Fried Rice
 
 description: This dish is based on [this video](https://youtu.be/SGBP3sG3a9Y) following the recipe of Elizabeth Haigh.
 
-Ingredients:
+Ingredients: asdf
  - Chicken stock
  - Garlic
  - Pandan leaves
@@ -19,7 +19,7 @@ Ingredients:
  - High heat oil
  - White pepper
 
-Steps:
+Steps: asdf
   - The day before Make a simple version of Hainanese rice with Chicken stock, Garlic, Pandan leaves, Ginger, Chicken fat.
   - The preparation something
 
