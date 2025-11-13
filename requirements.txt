@@ -1,2 +1,2 @@
 streamlit
-frontmatter
+python-frontmatter
