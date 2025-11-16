@@ -34,7 +34,7 @@ st.markdown("<h2 style='color:#4CAF50; font-family:Georgia;'>Ingredients</h2>", 
 #for item in recipe["ingredients"]:
 #    st.markdown(f"<p style='font-size:18px; font-family:Georgia; margin-left:20px;'>• {item}</p>", unsafe_allow_html=True)
 
-if section in recipe["ingredients"]:
+if section in recipe["ingredients"].items():
     for section, items in recipe["ingredients"].items():
         # Subsection header
         st.markdown(
@@ -81,6 +81,7 @@ if "tags" in recipe:
         + "</p>",
         unsafe_allow_html=True
     )
+
 
 
 
