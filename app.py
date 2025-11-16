@@ -24,6 +24,10 @@ st.markdown(f"<h1 style='color:#60207D; text-align:center; font-family:Georgia;'
 if "image" in recipe:
     st.image(recipe["image"], caption=recipe.get("description", ""), use_container_width=True)
 
+st.markdown("<h2 style='color:#4CAF50; font-family:Georgia;'>Description</h2>", unsafe_allow_html=True)
+if "description" in recipe:
+    st.markdown(recipe[description], unsafe_allow_html=True)
+
 # Ingredients section
 st.markdown("<h2 style='color:#4CAF50; font-family:Georgia;'>Ingredients</h2>", unsafe_allow_html=True)
 
@@ -60,6 +64,7 @@ if "tags" in recipe:
         + "</p>",
         unsafe_allow_html=True
     )
+
 
 
 
