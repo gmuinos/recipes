@@ -5,7 +5,7 @@ import os
 # --- Page setup ---
 st.set_page_config(page_title="My Recipe Book", page_icon="🍪", layout="centered")
 
-st.title("🍳 My Recipe Book")
+#st.title("🍳 My Recipe Book")
 
 # --- Load YAML recipes ---
 recipe_files = [f for f in os.listdir("recipes") if f.endswith(".yaml")]
@@ -17,20 +17,16 @@ with open(os.path.join("recipes", choice), "r", encoding="utf-8") as f:
 # --- Example of explicit formatting (you control everything) ---
 
 # Title section
-st.markdown(
-    f"<h1 style='color:#FF7043; text-align:center; font-family:Georgia;'>{recipe['title']}</h1>",
-    unsafe_allow_html=True
-)
+st.markdown(f"<h1 style='color:#B427F5; text-align:center; font-family:Georgia;'>{recipe['title']}</h1>",
+    unsafe_allow_html=True)
 
 # Image
 if "image" in recipe:
     st.image(recipe["image"], caption=recipe.get("description", ""), use_container_width=True)
 
 # Ingredients section
-st.markdown(
-    "<h2 style='color:#4CAF50; font-family:Trebuchet MS;'>🥣 Ingredients</h2>",
-    unsafe_allow_html=True
-)
+st.markdown("<h2 style='color:#4CAF50; font-family:Georgia;'>Ingredients</h2>", unsafe_allow_html=True)
+
 for item in recipe["ingredients"]:
     st.markdown(f"<p style='font-size:18px; margin-left:20px;'>• {item}</p>", unsafe_allow_html=True)
 
@@ -44,7 +40,8 @@ for item in recipe["ingredients"]:
 #        f"<p style='font-size:17px; margin-left:20px;'><b>Step {i}:</b> {step}</p>",
 #        unsafe_allow_html=True
 
-st.subheader("Instructions")
+st.markdown("<h2 style='color:#4CAF50; font-family:Georgia;'>Instructions</h2>", unsafe_allow_html=True)
+#st.subheader("Instructions")
 st.markdown(recipe["instructions"])
 
 
@@ -63,5 +60,6 @@ if "tags" in recipe:
         + "</p>",
         unsafe_allow_html=True
     )
+
 
 
