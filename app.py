@@ -26,7 +26,7 @@ if "image" in recipe:
 
 st.markdown("<h2 style='color:#4CAF50; font-family:Georgia;'>Description</h2>", unsafe_allow_html=True)
 if "description" in recipe:
-    st.markdown(recipe[description], unsafe_allow_html=True)
+    st.markdown(recipe["description"], unsafe_allow_html=True)
 
 # Ingredients section
 st.markdown("<h2 style='color:#4CAF50; font-family:Georgia;'>Ingredients</h2>", unsafe_allow_html=True)
@@ -64,6 +64,7 @@ if "tags" in recipe:
         + "</p>",
         unsafe_allow_html=True
     )
+
 
 
 
