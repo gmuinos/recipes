@@ -34,8 +34,10 @@ st.markdown("<h2 style='color:#4CAF50; font-family:Georgia;'>Ingredients</h2>", 
 #for item in recipe["ingredients"]:
 #    st.markdown(f"<p style='font-size:18px; font-family:Georgia; margin-left:20px;'>• {item}</p>", unsafe_allow_html=True)
 
+ingredients = recipe["ingredients"]
+
+# Case 1: ingredients WITH subsections (dict)
 if isinstance(ingredients, dict):
-    # There ARE subsections
     for section, items in ingredients.items():
         st.markdown(
             f"<h3 style='font-family:Georgia; margin-left:10px;'>{section}</h3>",
@@ -47,8 +49,8 @@ if isinstance(ingredients, dict):
                 unsafe_allow_html=True
             )
 
+# Case 2: ingredients WITHOUT subsections (list)
 elif isinstance(ingredients, list):
-    # There are NO subsections (plain list)
     for item in ingredients:
         st.markdown(
             f"<p style='font-size:18px; font-family:Georgia; margin-left:20px;'>• {item}</p>",
@@ -104,6 +106,7 @@ if "tags" in recipe:
         + "</p>",
         unsafe_allow_html=True
     )
+
 
 
 
