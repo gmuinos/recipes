@@ -35,9 +35,9 @@ for item in recipe["ingredients"]:
     st.markdown(f"<p style='font-size:18px; margin-left:20px;'>• {item}</p>", unsafe_allow_html=True)
 
 # Steps section
-st.markdown(
-    "<h2 style='color:#2196F3; font-family:Trebuchet MS;'>🧁 Steps</h2>",
-    unsafe_allow_html=True)
+#st.markdown(
+#    "<h2 style='color:#2196F3; font-family:Trebuchet MS;'>🧁 Steps</h2>",
+#    unsafe_allow_html=True)
 
 #for i, step in enumerate(recipe["steps"], 1):
 #    st.markdown(
@@ -63,4 +63,5 @@ if "tags" in recipe:
         + "</p>",
         unsafe_allow_html=True
     )
+
 
