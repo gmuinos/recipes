@@ -57,24 +57,6 @@ elif isinstance(ingredients, list):
             unsafe_allow_html=True
         )
 
-'''
-if section in recipe["ingredients"].items():
-    for section, items in recipe["ingredients"].items():
-        # Subsection header
-        st.markdown(
-            f"<h3 style='font-family:Georgia; margin-left:10px;'>{section}</h3>",
-            unsafe_allow_html=True
-        )
-        # Items in that section
-        for item in items:
-            st.markdown(
-                f"<p style='font-size:18px; font-family:Georgia; margin-left:30px;'>• {item}</p>",
-                unsafe_allow_html=True
-            )
-else:
-    for item in recipe["ingredients"]:
-        st.markdown(f"<p style='font-size:18px; font-family:Georgia; margin-left:20px;'>• {item}</p>", unsafe_allow_html=True)
-'''
 
 # Steps section
 #st.markdown(
@@ -106,6 +88,7 @@ if "tags" in recipe:
         + "</p>",
         unsafe_allow_html=True
     )
+
 
 
 
