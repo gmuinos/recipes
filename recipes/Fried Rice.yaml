@@ -1,7 +1,7 @@
 title: Fried Rice
 #image: null
 description: >
-  This dish is based on [this video](https://youtu.be/SGBP3sG3a9Y) following the recipe of Elizabeth Haigh.
+  This dish is **based** on [this video](https://youtu.be/SGBP3sG3a9Y) following the recipe of Elizabeth Haigh.
 ingredients:
  - Chicken stock
  - Garlic
@@ -18,8 +18,10 @@ ingredients:
  - Sesame oil
  - High heat oil
  - White pepper
-steps:
-  - The day before, make a *simple* version of Hainanese rice with chicken stock, garlic, pandan leaves, ginger, and chicken fat.
-  - preparation
+steps: |
+  ## The day before
+  Make a *simple* version of **Hainanese** rice with chicken stock, garlic, pandan leaves, ginger, and chicken fat.
+  ## Preparation
+  Something here
 notes: Nothing yet.
 tags: [rice]
