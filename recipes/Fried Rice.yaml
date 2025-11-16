@@ -22,6 +22,7 @@ steps:
   - before:
       before1: The day before, make a simple version of Hainanese rice with
         chicken stock, garlic, pandan leaves, ginger, and chicken fat.
-  - The preparation something
+      before: asdf
+  - The: preparation
 notes: Nothing yet.
 tags: [rice]
