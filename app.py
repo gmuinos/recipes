@@ -59,9 +59,17 @@ elif isinstance(ingredients, list):
 st.markdown("<h2 style='color:#4CAF50; font-family:Georgia;'>Instructions</h2>", unsafe_allow_html=True)
 
 st.markdown(
-    f"<p style='font-family:Garamond; font-size:20px; line-height:1.8;'>"
-    f"{recipe['instructions']}"
-    "</p>",
+    f"""
+    <div style="
+        font-family: Garamond, serif;
+        font-size: 20px;
+        line-height: 1.8;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    ">
+        {recipe["instructions"]}
+    </div>
+    """,
     unsafe_allow_html=True
 )
 
@@ -81,6 +89,7 @@ if "tags" in recipe:
         + "</p>",
         unsafe_allow_html=True
     )
+
 
 
 
