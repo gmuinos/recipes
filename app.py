@@ -60,7 +60,8 @@ st.markdown("<h2 style='color:#4CAF50; font-family:Georgia;'>Instructions</h2>",
 
 st.markdown("""
 <style>
-.my-instructions {
+/* Target the first markdown block */
+.stMarkdown div[data-testid="stMarkdownContainer"] {
     font-family: "Georgia", serif;
     line-height: 1.8;
     font-size: 18px;
@@ -69,12 +70,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-#st.markdown(recipe["instructions"])
-st.markdown(f"""
-<div class="my-instructions">
-    {recipe["instructions"]}
-</div>
-""", unsafe_allow_html=True)
+st.markdown(recipe["instructions"])
 
             
 # Notes section (optional)
@@ -92,6 +88,7 @@ if "tags" in recipe:
         + "</p>",
         unsafe_allow_html=True
     )
+
 
 
 
