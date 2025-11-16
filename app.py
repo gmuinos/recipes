@@ -49,7 +49,7 @@ if section in recipe["ingredients"]:
             )
 else:
     for item in recipe["ingredients"]:
-    st.markdown(f"<p style='font-size:18px; font-family:Georgia; margin-left:20px;'>• {item}</p>", unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size:18px; font-family:Georgia; margin-left:20px;'>• {item}</p>", unsafe_allow_html=True)
 
 # Steps section
 #st.markdown(
@@ -81,6 +81,7 @@ if "tags" in recipe:
         + "</p>",
         unsafe_allow_html=True
     )
+
 
 
 
