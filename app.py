@@ -37,13 +37,16 @@ for item in recipe["ingredients"]:
 # Steps section
 st.markdown(
     "<h2 style='color:#2196F3; font-family:Trebuchet MS;'>🧁 Steps</h2>",
-    unsafe_allow_html=True
-)
-for i, step in enumerate(recipe["steps"], 1):
-    st.markdown(
-        f"<p style='font-size:17px; margin-left:20px;'><b>Step {i}:</b> {step}</p>",
-        unsafe_allow_html=True
-    )
+    unsafe_allow_html=True)
+
+#for i, step in enumerate(recipe["steps"], 1):
+#    st.markdown(
+#        f"<p style='font-size:17px; margin-left:20px;'><b>Step {i}:</b> {step}</p>",
+#        unsafe_allow_html=True
+
+st.subheader("Instructions")
+st.markdown(recipe["instructions"])
+
 
 # Notes section (optional)
 if "notes" in recipe:
@@ -60,3 +63,4 @@ if "tags" in recipe:
         + "</p>",
         unsafe_allow_html=True
     )
+
