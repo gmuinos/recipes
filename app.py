@@ -17,7 +17,7 @@ with open(os.path.join("recipes", choice), "r", encoding="utf-8") as f:
 # --- Example of explicit formatting (you control everything) ---
 
 # Title section
-st.markdown(f"<h1 style='color:#B427F5; text-align:center; font-family:Georgia;'>{recipe['title']}</h1>",
+st.markdown(f"<h1 style='color:#60207D; text-align:center; font-family:Georgia;'>{recipe['title']}</h1>",
     unsafe_allow_html=True)
 
 # Image
@@ -28,7 +28,7 @@ if "image" in recipe:
 st.markdown("<h2 style='color:#4CAF50; font-family:Georgia;'>Ingredients</h2>", unsafe_allow_html=True)
 
 for item in recipe["ingredients"]:
-    st.markdown(f"<p style='font-size:18px; margin-left:20px;'>• {item}</p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='font-size:18px; font-family:Georgia; margin-left:20px;'>• {item}</p>", unsafe_allow_html=True)
 
 # Steps section
 #st.markdown(
@@ -60,6 +60,7 @@ if "tags" in recipe:
         + "</p>",
         unsafe_allow_html=True
     )
+
 
 
 
