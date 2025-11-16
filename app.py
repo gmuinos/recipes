@@ -24,15 +24,13 @@ st.markdown(f"<h1 style='color:#60207D; text-align:center; font-family:Georgia;'
 if "image" in recipe:
     st.image(recipe["image"], caption=recipe.get("description", ""), use_container_width=True)
 
+# Description
 st.markdown("<h2 style='color:#4CAF50; font-family:Georgia;'>Description</h2>", unsafe_allow_html=True)
 if "description" in recipe:
     st.markdown(recipe["description"], unsafe_allow_html=True)
 
 # Ingredients section
 st.markdown("<h2 style='color:#4CAF50; font-family:Georgia;'>Ingredients</h2>", unsafe_allow_html=True)
-
-#for item in recipe["ingredients"]:
-#    st.markdown(f"<p style='font-size:18px; font-family:Georgia; margin-left:20px;'>• {item}</p>", unsafe_allow_html=True)
 
 ingredients = recipe["ingredients"]
 
@@ -57,20 +55,15 @@ elif isinstance(ingredients, list):
             unsafe_allow_html=True
         )
 
-
-# Steps section
-#st.markdown(
-#    "<h2 style='color:#2196F3; font-family:Trebuchet MS;'>🧁 Steps</h2>",
-#    unsafe_allow_html=True)
-
-#for i, step in enumerate(recipe["steps"], 1):
-#    st.markdown(
-#        f"<p style='font-size:17px; margin-left:20px;'><b>Step {i}:</b> {step}</p>",
-#        unsafe_allow_html=True
-
+# Instructions
 st.markdown("<h2 style='color:#4CAF50; font-family:Georgia;'>Instructions</h2>", unsafe_allow_html=True)
-#st.subheader("Instructions")
-st.markdown(recipe["instructions"])
+
+st.markdown(
+    f"<p style='font-family:Garamond; font-size:20px; line-height:1.8;'>"
+    f"{recipe['instructions']}"
+    "</p>",
+    unsafe_allow_html=True
+)
 
 
 # Notes section (optional)
@@ -88,6 +81,7 @@ if "tags" in recipe:
         + "</p>",
         unsafe_allow_html=True
     )
+
 
 
 
