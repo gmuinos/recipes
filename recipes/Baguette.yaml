@@ -6,7 +6,7 @@ description: >
 ingredients:
   - asdf
 
-instructions:
+instructions: |
   ## Day before
   - Combine the flour, yeast, and water.
   - Cover and let it rest overnight at room temperature, 12 to 16 hours. 
